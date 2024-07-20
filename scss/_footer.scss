@@ -1,0 +1,81 @@
+footer {
+  background-color: $darkGreen;
+  color: #fff;
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3.25rem 1.25rem;
+    @media only screen and (min-width: 576px) {
+      padding: 3.25rem 2.5rem;
+    }
+    @media only screen and (min-width: 992px) {
+      flex-direction: row;
+      padding: 3.25rem 1.5rem;
+    }
+    .footer__image {
+      @media only screen and (min-width: 992px) {
+        display: flex;
+        flex-basis: 25%;
+      }
+      img {
+        margin: 0 auto;
+        max-width: 150px;
+        @media only screen and (min-width: 992px) {
+          align-self: center;
+        }
+      }
+    }
+    .footer__text {
+      margin: 2.5rem 0;
+      text-align: center;
+      @media only screen and (min-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        justify-content: center;
+        margin: 0;
+      }
+      & > p {
+        font-size: 1.5rem;
+        margin: 0 0 1rem 0;
+        @media only screen and (min-width: 992px) {
+          font-size: 2rem;
+          margin: auto 0;
+        }
+      }
+      & > div {
+        align-items: center;
+        display: flex;
+        font-size: 0.85rem;
+        justify-content: center;
+        text-align: right;
+        @media only screen and (min-width: 992px) {
+          margin: auto 0 0 0;
+        }
+        img {
+          margin: 0 0 0 0.5rem;
+          max-width: 50px;
+        }
+      }
+    }
+    .footer__contact {
+      text-align: center;
+      p.title {
+        font-size: 1.5rem;
+        margin: 0 0 1.5rem 0;
+      }
+      p.text {
+        margin: 0 0 1rem 0;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 25%;
+      }
+    }
+  }
+}
