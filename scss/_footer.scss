@@ -66,8 +66,19 @@ footer {
       }
       p.text {
         margin: 0 0 1rem 0;
-        &:last-of-type {
-          margin: 0;
+      }
+      & > a {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        &:hover {
+          color: $orange;
+          text-decoration: underline;
+        }
+        img {
+          margin: 0 0.5rem 0 0;
         }
       }
       @media only screen and (min-width: 992px) {
