@@ -1,103 +1,138 @@
 .main {
+  padding-top: 104px;
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 171px;
+  }
+
   .main__hero {
+
+
     .hero__content-image {
-      margin-top: 130px;
       @media only screen and (min-width: 992px) {
         flex-basis: 60%;
         margin: 0;
         padding: 0;
-        margin-top: 190px;
       }
+
       @media only screen and (min-width: 1200px) {
         flex-basis: 100%;
         margin: 0 auto;
       }
+
       img {
         margin: 0 auto;
         width: 100%;
       }
     }
+
     .hero__content-text {
+      padding: 2rem 0.75rem;
       font-size: .9rem;
       text-align: center;
       margin: 0 auto;
       max-width: 800px;
       margin: 2rem auto;
-      padding: 0 0.75rem;
+
       @media only screen and (min-width: 400px) {
-        padding: 0 2.5rem;
+        padding: 2rem 2.5rem;
       }
+
+      @media only screen and (min-width: 600px) {
+        font-size: 1.25rem;
+      }
+
       @media only screen and (min-width: 992px) {
         margin: 7.5rem auto;
         padding: 0;
         font-size: 1.5rem;
       }
+
+
+
       span {
         color: $darkGreen;
         font-weight: 700;
       }
     }
   }
+
   .main__problem {
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
+
     @media only screen and (min-width: 576px) {
       flex-direction: row;
     }
+
     .problem__content-image {
       max-width: 200px;
-       @media only screen and (min-width: 576px) {
+
+      @media only screen and (min-width: 576px) {
         max-width: 300px;
       }
     }
-    .problem-img-mobile{
+
+    .problem-img-mobile {
       @media only screen and (min-width: 992px) {
         display: none;
       }
     }
-    .problem-img-desktop{
+
+    .problem-img-desktop {
       @media only screen and (max-width: 992px) {
         display: none;
       }
     }
+
     .problem__content-header {
       margin: 0 auto;
       padding: 0 1rem 0 0;
       flex-grow: 1;
+
       @media only screen and (min-width: 400px) {
         padding: 0 2.5rem 0 0;
       }
+
       @media only screen and (min-width: 800px) {
-          padding: 5rem 2.5rem 0 0;
-        }
+        padding: 5rem 2.5rem 0 0;
+      }
+
       @media only screen and (min-width: 992px) {
         padding: 0;
         flex-grow: 0;
       }
+
       .header__title {
         color: $orange;
         font-size: 1.5rem;
         font-weight: 700;
         margin: 0 0 1.5rem 0;
+
         @media only screen and (min-width: 576px) {
           font-size: 2rem;
         }
+
         @media only screen and (min-width: 992px) {
           font-size: 2.25rem;
         }
       }
+
       .header__text {
         max-width: 850px;
         font-size: .9rem;
+
         @media only screen and (min-width: 652px) {
           font-size: 1.25rem;
         }
+
         @media only screen and (min-width: 992px) {
           font-size: 1.25rem;
           padding: 0;
         }
+
         p {
           &:first-of-type {
             margin: 0 0 1rem 0;
@@ -106,36 +141,46 @@
       }
     }
   }
+
   .main__solution {
     display: flex;
     flex-direction: column;
     padding: 2rem 0 7.5rem 0;
+
     @media only screen and (min-width: 576px) {
       padding: 7.5rem 0;
     }
+
     .solution__content-header {
       padding: 0 0 5rem 0;
       display: flex;
       flex-direction: row;
       align-items: center;
+
       @media only screen and (min-width: 576px) {
         flex-direction: row;
         justify-content: space-between;
       }
+
       .header__title {
         text-align: center;
+
         @media only screen and (min-width: 576px) {
           padding: 0 0 0 5rem;
         }
+
         @media only screen and (min-width: 992px) {
           padding: 0 0 0 7rem;
         }
+
         @media only screen and (min-width: 1400px) {
           padding: 0 0 0 15rem;
         }
+
         @media only screen and (min-width: 1600px) {
           padding: 0 0 0 20rem;
         }
+
         p {
           &:first-of-type {
             color: $orange;
@@ -143,84 +188,106 @@
             font-weight: 700;
             margin: 0 0 1.5rem 0;
             text-align: center;
+
             @media only screen and (min-width: 576px) {
               font-size: 1.75rem;
             }
+
             @media only screen and (min-width: 992px) {
               font-size: 2.25rem;
             }
+
             @media only screen and (min-width: 1200px) {
               font-size: 2.5rem;
             }
           }
+
           &:last-of-type {
             font-size: 1.5rem;
+
             @media only screen and (min-width: 576px) {
               font-size: 1.75rem;
             }
+
             @media only screen and (min-width: 992px) {
               font-size: 2.25rem;
             }
+
             @media only screen and (min-width: 1200px) {
               font-size: 2.5rem;
             }
           }
         }
       }
+
       .header__image {
         max-width: 200px;
         align-self: flex-end;
+
         @media only screen and (min-width: 576px) {
           max-width: 300px;
         }
       }
     }
+
     .solution__content-text {
       margin: 0 auto;
       padding: 0 2.5rem;
       max-width: 780px;
       text-align: center;
+
       @media only screen and (min-width: 1366px) {
         max-width: 925px;
       }
+
       h2 {
         font-size: 1rem;
         margin: 0 0 1rem 0;
+
         @media only screen and (min-width: 992px) {
           font-size: 1.5rem;
         }
+
         span {
           &:first-of-type {
             color: $orange;
           }
+
           &:last-of-type {
             color: $lightGreen;
           }
         }
       }
+
       p {
         font-size: 1rem;
+
         @media only screen and (min-width: 992px) {
           font-size: 1.25rem;
         }
       }
     }
   }
+
   .main__products {
     padding: 0 0.75rem 2rem 0.75rem;
+
     .products__content-title {
-      scroll-margin-top: 150px; /* Altura de la navbar + un extra para que el destino esté centrado */
+      scroll-margin-top: 150px;
+      /* Altura de la navbar + un extra para que el destino esté centrado */
       color: $orange;
       font-size: 2.25rem;
       font-weight: 700;
       margin: 0 0 2.5rem 0;
       text-align: center;
     }
+
     .products__content-container {
       align-items: center;
       display: flex;
       flex-direction: column;
       gap: 3rem;
+
       @media only screen and (min-width: 992px) {
         align-items: start;
         flex-direction: row;
@@ -229,17 +296,22 @@
         margin: 0 auto;
         max-width: 780px;
       }
+
       @media only screen and (min-width: 1366px) {
         max-width: 925px;
       }
+
       .container__block {
         max-width: 375px;
+
         @media only screen and (min-width: 992px) {
           flex-basis: 50%;
         }
+
         img {
           width: 100%;
         }
+
         .block__title {
           color: $lightGreen;
           font-size: 1.5rem;
@@ -250,21 +322,25 @@
       }
     }
   }
+
   .main__advantages {
     padding: 0 0.75rem 7.5rem 0.75rem;
     max-width: 1000px;
     margin: auto;
-    .advantages__content-container{
+
+    .advantages__content-container {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       align-items: center;
+
       @media only screen and (min-width: 992px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
       }
-      .block__text{
+
+      .block__text {
         min-width: 250px;
 
         text-align: center;
@@ -272,34 +348,40 @@
         background-color: $boxBackground;
         border-radius: 25px;
         padding: 2rem;
+
         @media only screen and (min-width: 992px) {
           min-width: 250px;
           max-width: 300px;
         }
       }
     }
-  } 
-  .main__impact{
+  }
+
+  .main__impact {
     padding: 0 0.75rem 7.5rem 0.75rem;
-    .impact__content-title{
-      scroll-margin-top: 150px; /* Altura de la navbar + un extra para que el destino esté centrado */
+
+    .impact__content-title {
+      scroll-margin-top: 150px;
+      /* Altura de la navbar + un extra para que el destino esté centrado */
       color: $orange;
       font-size: 2.25rem;
       font-weight: 700;
       margin: 0 0 2.5rem 0;
       text-align: center;
     }
-    .impact__content-container{
+
+    .impact__content-container {
       text-align: center;
       max-width: 1000px;
       margin: auto;
-      .block-text{
+
+      .block-text {
         padding: 1rem;
-        @media screen and (min-width:992px) {
-  
-        }      
+
+        @media screen and (min-width:992px) {}
       }
-      .impact__image-container{
+
+      .impact__image-container {
         margin-top: 2rem;
         max-width: 1000px;
         display: flex;
@@ -308,37 +390,46 @@
         justify-content: space-around;
         gap: 1rem;
         flex-basis: 40%;
+
         img {
           max-width: 150px;
         }
       }
     }
   }
+
   .main__team {
     padding: 0 0.75rem 7.5rem 0.75rem;
+
     .team__content-header {
       margin: 0 0 3rem 0;
+
       .header__title {
         color: $orange;
         font-size: 2.25rem;
         font-weight: 700;
         margin: 0 0 1.5rem 0;
-        scroll-margin-top: 150px; /* Altura de la navbar + un extra para que el destino esté centrado */
+        scroll-margin-top: 150px;
+        /* Altura de la navbar + un extra para que el destino esté centrado */
         text-align: center;
       }
+
       .header__text {
         font-size: 1rem;
         text-align: center;
+
         @media only screen and (min-width: 992px) {
           font-size: 1.5rem;
         }
       }
     }
+
     .team__content-container {
       align-items: center;
       display: flex;
       flex-direction: column;
       gap: 3rem;
+
       @media only screen and (min-width: 992px) {
         align-items: stretch;
         flex-direction: row;
@@ -347,43 +438,52 @@
         margin: 0 auto;
         max-width: 1000px;
       }
+
       .container__block {
         max-width: 425px;
+
         @media only screen and (min-width: 992px) {
           display: flex;
           flex-direction: column;
           flex-basis: 33%;
         }
+
         img {
           margin: 0 auto;
           max-width: 250px;
           width: 100%;
         }
+
         .block__title {
           color: #000;
           font-size: 1.5rem;
           margin: 2rem 0 1rem 0;
           text-align: center;
+
           span {
             color: $lightGreen;
             font-weight: 600;
           }
         }
+
         .block__text {
           margin: 0 0 1rem 0;
           text-align: center;
         }
-        & > a {
+
+        &>a {
           align-items: center;
           color: #000;
           display: flex;
           justify-content: center;
           margin: auto 0 0 0;
           text-decoration: none;
+
           &:hover {
             color: $orange;
             text-decoration: underline;
           }
+
           img {
             margin: 0 0 0 0.25rem;
             max-width: 1.75rem;
@@ -392,45 +492,58 @@
       }
     }
   }
-  .main__sponsors{
-    .sponsors__title{
+
+  .main__sponsors {
+    .sponsors__title {
       color: $orange;
-        font-size: 2.25rem;
-        font-weight: 700;
-        margin: 0 0 1.5rem 0;
-        text-align: center;
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin: 0 0 1.5rem 0;
+      text-align: center;
     }
-    .sponsors__images{
+
+    .sponsors__images {
       padding: 0 0 5rem 0;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       gap: 1rem;
-      img{
+      align-items: center;
+
+      @media only screen and (min-width: 576px) {
+        flex-direction: row;
+      }
+
+      img {
         width: 200px;
       }
     }
   }
-  .main__invitation{
+
+  .main__invitation {
     text-align: center;
     font-size: 1.5rem;
     margin: 0 0 50px 0;
-    .invitation-top{
-        color: $darkGreen;
-      }
-      .invitation-middle{
-        padding: 1.5rem 0;
-        font-size: 2rem;
-        color: $lightGreen;
-        font-weight: 800;
-        //text-shadow: 1px 1px 2px black;
-      }
-      .invitation-bottom{
-        color: $orange;
-      }
+
+    .invitation-top {
+      color: $darkGreen;
+    }
+
+    .invitation-middle {
+      padding: 1.5rem 0;
+      font-size: 2rem;
+      color: $lightGreen;
+      font-weight: 800;
+    }
+
+    .invitation-bottom {
+      color: $orange;
+    }
+
     @media only screen and (min-width: 992px) {
       font-size: 2rem;
-      .invitation-middle{
+
+      .invitation-middle {
         font-size: 2.5rem;
       }
     }
