@@ -167,6 +167,9 @@ select {
     padding-top: 171px;
   }
 }
+.main .main__hero .hero__content-image {
+  overflow: hidden;
+}
 @media only screen and (min-width: 992px) {
   .main .main__hero .hero__content-image {
     flex-basis: 60%;
@@ -183,10 +186,24 @@ select {
 .main .main__hero .hero__content-image img {
   margin: 0 auto;
   width: 100%;
+  animation-name: hero-animation;
+  animation-duration: 20s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes hero-animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
 .main .main__hero .hero__content-text {
   padding: 2rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
@@ -211,7 +228,7 @@ select {
 }
 .main .main__hero .hero__content-text span {
   color: #00422b;
-  font-weight: 700;
+  font-weight: 500;
 }
 .main .main__problem {
   display: flex;
@@ -271,7 +288,7 @@ select {
 }
 @media only screen and (min-width: 576px) {
   .main .main__problem .problem__content-header .header__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -555,7 +572,7 @@ select {
 }
 .main .main__impact .impact__content-container .block-text span {
   color: #00422b;
-  font-weight: 700;
+  font-weight: 500;
 }
 .main .main__impact .impact__content-container .impact__image-container {
   margin-top: 2rem;
@@ -595,6 +612,9 @@ select {
     font-size: 1.5rem;
   }
 }
+.main .main__team .team__content-header .header__text span {
+  color: #00422b;
+}
 .main .main__team .team__content-container {
   align-items: center;
   display: flex;
@@ -625,6 +645,7 @@ select {
   margin: 0 auto;
   max-width: 250px;
   width: 100%;
+  border-radius: 100%;
 }
 .main .main__team .team__content-container .container__block .block__title {
   color: #000;
@@ -651,15 +672,15 @@ select {
   display: flex;
   justify-content: center;
   margin: auto 0 0 0;
-  text-decoration: none;
+  transition: transform 200ms ease-in-out;
 }
 .main .main__team .team__content-container .container__block > a:hover {
-  color: #ffb144;
-  text-decoration: underline;
+  transform: scale(1.1);
 }
 .main .main__team .team__content-container .container__block > a img {
   margin: 0 0 0 0.25rem;
-  max-width: 1.75rem;
+  max-width: 5rem;
+  border-radius: 0;
 }
 .main .main__sponsors .sponsors__title {
   color: #ffb144;
@@ -683,6 +704,10 @@ select {
 }
 .main .main__sponsors .sponsors__images img {
   width: 200px;
+  transition: transform 200ms ease-in-out;
+}
+.main .main__sponsors .sponsors__images img:hover {
+  transform: scale(1.05);
 }
 .main .main__invitation {
   text-align: center;

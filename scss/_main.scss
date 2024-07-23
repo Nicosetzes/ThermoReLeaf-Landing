@@ -6,6 +6,7 @@
 
   .main__hero {
     .hero__content-image {
+      overflow: hidden;
       @media only screen and (min-width: 992px) {
         flex-basis: 60%;
         margin: 0;
@@ -18,11 +19,21 @@
       img {
         margin: 0 auto;
         width: 100%;
+        @keyframes hero-animation {
+          from {transform: scale(1)}
+          to {transform: scale(1.2)}
+        }
+        animation-name: hero-animation;
+        animation-duration: 20s;
+        animation-delay: 0;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     }
     .hero__content-text {
       padding: 2rem 0.75rem;
-      font-size: .9rem;
+      font-size: 1.1rem;
       text-align: center;
       margin: 0 auto;
       max-width: 800px;
@@ -40,7 +51,7 @@
       }
       span {
         color: $darkGreen;
-        font-weight: 700;
+        font-weight: 500;
       }
     }
   }
@@ -89,7 +100,7 @@
         font-weight: 700;
         margin: 0 0 1.5rem 0;
         @media only screen and (min-width: 576px) {
-          font-size: 2rem;
+          font-size: 1.75rem;
         }
         @media only screen and (min-width: 992px) {
           font-size: 2.25rem;
@@ -332,7 +343,7 @@
         padding: 1rem;
         span {
           color: $darkGreen;
-          font-weight: 700;
+          font-weight: 500;
         }
       }
       .impact__image-container {
@@ -371,6 +382,9 @@
         @media only screen and (min-width: 992px) {
           font-size: 1.5rem;
         }
+        span{
+          color: $darkGreen;
+        }
       }
     }
     .team__content-container {
@@ -397,6 +411,7 @@
           margin: 0 auto;
           max-width: 250px;
           width: 100%;
+          border-radius: 100%;
         }
         .block__title {
           color: #000;
@@ -421,14 +436,14 @@
           display: flex;
           justify-content: center;
           margin: auto 0 0 0;
-          text-decoration: none;
+          transition: transform 200ms ease-in-out;
           &:hover {
-            color: $orange;
-            text-decoration: underline;
+            transform: scale(1.1);
           }
           img {
             margin: 0 0 0 0.25rem;
-            max-width: 1.75rem;
+            max-width: 5rem;
+            border-radius: 0;
           }
         }
       }
@@ -450,13 +465,15 @@
       justify-content: center;
       gap: 1rem;
       align-items: center;
-
       @media only screen and (min-width: 576px) {
         flex-direction: row;
       }
-
       img {
         width: 200px;
+        transition: transform 200ms ease-in-out;
+        &:hover{
+          transform: scale(1.05);
+        }
       }
     }
   }
