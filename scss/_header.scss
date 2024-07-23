@@ -1,7 +1,7 @@
 .header {
   nav {
     background-color: $darkGreen;
-    padding: .25rem 0 0 0;
+    padding: 0.25rem 0 0 0;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -19,8 +19,11 @@
       & > a {
         text-decoration: none;
         .nav-banner {
-          max-width: 300px;
+          max-width: 250px;
           margin: 0 0 0 5px;
+          @media only screen and (min-width: 350px) {
+            max-width: 300px;
+          }
         }
       }
       .navbar-toggler {
@@ -45,7 +48,7 @@
           align-items: center;
           @media only screen and (min-width: 992px) {
             height: 2rem;
-            margin: 1rem 0 .15rem 0;
+            margin: 1rem 0 0.15rem 0;
           }
 
           .nav-link {
@@ -99,7 +102,7 @@
           rgba(255, 177, 68, 1) 100%
         );
         border: 0;
-        height: .5rem;
+        height: 0.5rem;
         width: 100%;
         @media only screen and (min-width: 992px) {
           height: 1rem;
