@@ -4,11 +4,11 @@
     padding: 0.25rem 0 0 0;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 5;
     @media only screen and (min-width: 992px) {
       padding: 1.25rem 0 0 0;
-      position: absolute;
+      position: static;
     }
     .container-fluid {
       flex-direction: row;
@@ -23,6 +23,10 @@
           margin: 0 0 0 5px;
           @media only screen and (min-width: 350px) {
             max-width: 300px;
+            margin: 0 0 0 10px;
+          }
+          @media only screen and (min-width: 350px) {
+            margin: 0;;
           }
         }
       }
@@ -42,7 +46,6 @@
         padding: 0;
         @media only screen and (min-width: 992px) {
           justify-content: flex-end;
-          //   padding: 0;
         }
         .navbar-nav {
           align-items: center;
@@ -50,7 +53,6 @@
             height: 2rem;
             margin: 1rem 0 0.15rem 0;
           }
-
           .nav-link {
             color: #fff;
             display: inline-block;

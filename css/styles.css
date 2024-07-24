@@ -50,13 +50,13 @@ select {
   padding: 0.25rem 0 0 0;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 5;
 }
 @media only screen and (min-width: 992px) {
   .header nav {
     padding: 1.25rem 0 0 0;
-    position: absolute;
+    position: static;
   }
 }
 .header nav .container-fluid {
@@ -78,6 +78,12 @@ select {
 @media only screen and (min-width: 350px) {
   .header nav .container-fluid > a .nav-banner {
     max-width: 300px;
+    margin: 0 0 0 10px;
+  }
+}
+@media only screen and (min-width: 350px) {
+  .header nav .container-fluid > a .nav-banner {
+    margin: 0;
   }
 }
 .header nav .container-fluid .navbar-toggler {
@@ -169,8 +175,11 @@ select {
 }
 @media only screen and (min-width: 992px) {
   .main {
-    padding-top: 171px;
+    padding-top: 0;
   }
+}
+.main .main__hero {
+  z-index: 3;
 }
 .main .main__hero .hero__content-image {
   overflow: hidden;
@@ -228,6 +237,9 @@ select {
     padding: 5rem 0;
   }
 }
+.main .main__hero .hero__content-text h2 {
+  display: inline;
+}
 .main .main__hero .hero__content-text span {
   color: #00422b;
   font-weight: 500;
@@ -241,13 +253,35 @@ select {
 }
 @media only screen and (min-width: 500px) {
   .main .main__problem {
+    padding: 0 0 2rem 0;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .main .main__problem {
     padding: 0;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .main .main__problem {
+    padding: 0 0 2rem 0;
+  }
+}
 .main .main__problem .problem__content-image {
-  max-width: 200px;
+  max-width: 100px;
+  padding: 0 0 2rem 0;
 }
 @media only screen and (min-width: 576px) {
+  .main .main__problem .problem__content-image {
+    max-width: 150px;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main .main__problem .problem__content-image {
+    max-width: 150px;
+  }
+}
+@media only screen and (min-width: 992px) {
   .main .main__problem .problem__content-image {
     max-width: 300px;
   }
@@ -314,17 +348,37 @@ select {
   font-weight: 700;
   color: #75f94c;
 }
+@media only screen and (min-width: 1200px) {
+  .main .main__problem .problem__content-blank {
+    width: 300px;
+  }
+}
 .main .main__solution {
   display: flex;
   flex-direction: column;
   padding: 0 0 5rem 0;
 }
+@media only screen and (min-width: 1200px) {
+  .main .main__solution .header__blank {
+    width: 300px;
+  }
+}
 .main .main__solution .solution__content-header {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin: 0 0 3rem 0;
+  margin: 0;
   scroll-margin-top: 150px; /* Altura de la navbar + un extra para que el destino esté centrado */
+  /* .solution-img-mobile {
+    @media only screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+  .solution-img-desktop {
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  } */
 }
 @media only screen and (min-width: 576px) {
   .main .main__solution .solution__content-header {
@@ -361,6 +415,7 @@ select {
 .main .main__solution .solution__content-header .solution__subtitle {
   font-size: 1.125rem;
   margin: 0 1rem;
+  padding: 0 0 2rem 0;
 }
 @media only screen and (min-width: 768px) {
   .main .main__solution .solution__content-header .solution__subtitle {
@@ -373,16 +428,32 @@ select {
 .main .main__solution .solution__content-header .solution__subtitle span:last-of-type {
   color: #75f94c;
 }
-.main .main__solution .solution__content-text {
+.main .main__solution .solution__content-header .solution__text {
   margin: 0 auto;
   padding: 0 2.5rem;
   max-width: 600px;
   text-align: center;
 }
+@media only screen and (max-width: 576px) {
+  .main .main__solution .solution__content-header .solution__text {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
-  .main .main__solution .solution__content-text {
-    font-size: 1.125rem;
+  .main .main__solution .solution__content-header .solution__text {
+    font-size: 1rem;
     padding: 0;
+  }
+}
+.main .main__solution .solution__text-mobile {
+  margin: 0 auto;
+  padding: 2rem 2.5rem 0 2.5rem;
+  max-width: 600px;
+  text-align: center;
+}
+@media only screen and (min-width: 576px) {
+  .main .main__solution .solution__text-mobile {
+    display: none;
   }
 }
 .main .main__products {
@@ -563,7 +634,7 @@ select {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 1.5rem 0;
-  scroll-margin-top: 150px; /* Altura de la navbar + un extra para que el destino esté centrado */
+  scroll-margin-top: 0px; /* Altura de la navbar + un extra para que el destino esté centrado */
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -817,5 +888,30 @@ footer .footer__wrapper .footer__contact > a img {
     flex-direction: column;
     justify-content: center;
     flex-basis: 25%;
+  }
+}
+footer .up-arrow {
+  display: none;
+  position: fixed;
+  width: 50px;
+  border: 3px solid #ffb144;
+  border-radius: 10px;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+  transition: transform 100ms ease-in-out;
+}
+footer .up-arrow:hover {
+  transform: scale(1.1);
+  background-color: #75f94c;
+}
+footer .up-arrow:focus footer .up-arrow:active {
+  transform: scale(1);
+  background-color: none;
+}
+@media screen {
+  footer .up-arrow {
+    min-width: 992;
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */
