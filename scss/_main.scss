@@ -90,6 +90,9 @@
       @media only screen and (min-width: 992px) {
         flex-grow: 0;
       }
+      @media only screen and (min-width: 1200px) {
+        padding: 3rem 0.5rem 0 0;
+      }
       .header__title {
         color: $orange;
         font-size: 1.75rem;
@@ -129,6 +132,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 5rem 0;
+    @media only screen and (min-width: 1200px) {
+      padding: 0 0 3rem 0;
+    }
     .solution__content-header {
       align-items: center;
       display: flex;
@@ -142,7 +148,11 @@
       .header__text {
         margin: auto;
         max-width: 775px;
+        padding: 0 0.5rem;
         text-align: center;
+        @media only screen and (min-width: 1200px) {
+          padding: 0 0.5rem 3rem 0.5rem;
+        }
         @media only screen and (min-width: 1500px) {
           max-width: 900px;
         }
@@ -431,6 +441,11 @@
           text-align: center;
           @media only screen and (min-width: 992px) {
             padding: 0 0.5rem;
+          }
+          p {
+            &:first-of-type {
+              margin: 0 0 0.75rem 0;
+            }
           }
         }
         & > a {
